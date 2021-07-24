@@ -1,0 +1,19 @@
+.stepper{
+margin-top: 50px;
+    margin-left: 100px;
+    padding-left: 140px;
+   
+}
+::ng-deep .mat-step-header .mat-step-icon{
+    background-color: rgb(6, 153, 252); 
+  }
+  .foo {
+    padding: 30px;
+    background-color:white;
+    margin-top: 150px;
+   
+  }
+  .formreg{
+    margin-bottom: 300px;
+    
+  }

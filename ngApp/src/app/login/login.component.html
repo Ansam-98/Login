@@ -1,0 +1,45 @@
+
+<div class="body1">
+    <div class="container company ">
+      <div class="row">
+        <div class="col-lg-8 col-md-6 company2 ">
+      <b class="bold">Company </b><b class="bold2">Logo</b><br><br>
+      <p style="color: white;"><span style="color:rgb(4, 174, 241);">LOREM IPSUM </span>is simply dummy text of the printing and<br> typesetting industry.</p>
+    </div>
+    <div class="col-lg-4 col-md-6">
+    <form class="form-group container1">
+      <h1 class="login">Welcome</h1>
+  <p class=" login" style="color:rgb(85, 84, 84)">Login to Continue</p>
+     
+  <div class="input-icons"><i class='bx bx-user icon' style='color:#31bbfd'  ></i>
+    <input [(ngModel)]="loginUserData.email" name="email" type="email"  class="form-control rounded-2 input1" placeholder=" Email Address" required></div>
+    
+      <br>
+      <div class="input-icons">
+      <i class='bx bx-lock-alt icon' style='color:#31bbfd'  ></i>
+      <input [(ngModel)]="loginUserData.password" name="password" type="password" class="form-control rounded-2 input1" placeholder="Password" required>
+  </div><br>
+  <div class="row">
+    <div class="col">
+  <input type="checkbox" >
+  <label style="color: rgb(25, 125, 206);">Remember me</label><br><br></div> 
+  <div class="clo-lg-6 "><a href="">Forget Password?</a></div>
+  </div>
+  <div >
+      <button (click)="loginUser()"  type="button" class="btn  form-control btn1" routerLink="/login" routerLinkActive="active">LOGIN</button>
+     
+     
+   <div class="row" style="margin-left: 85px;">  <a  routerLink='/admin' routerLinkActive="active">Login as Admin</a></div>
+      <div style="padding-bottom: 100px;" class="row a2">Not a member? <a  routerLink="/register" routerLinkActive="active" class="post-user">New User</a></div></div>
+    </form></div></div>
+  </div>
+  
+  <footer>
+    <p style="margin-top: 5px;">&copy;
+    <span style="color: rgb(49, 173, 245);">	 Company Name
+   </span>2021. All Rights Reserved</p>
+  </footer>
+  </div>
+  
+    <router-outlet></router-outlet>
+  

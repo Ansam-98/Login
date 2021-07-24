@@ -1,0 +1,94 @@
+<div class="row stepper">
+    <div class="col-lg-8">
+<mat-horizontal-stepper>
+    <ng-template matStepperIcon="edit">
+		<mat-icon>done</mat-icon>
+	</ng-template>
+    <mat-step label="Fill out your address" ></mat-step>
+    <mat-step label="Complete Task"></mat-step>
+    <mat-step label="Submit Task"></mat-step>
+</mat-horizontal-stepper></div></div>
+<form style="padding-bottom: 150px;">
+<div class="row ">
+    
+    <div class="col-md-10 mx-auto ">
+        <h2>Application</h2>
+        <div class="card rounded-0">
+           
+            <div class="card-header" style="background-color: white">
+                <h2 class="mb-0">Device profile details</h2>
+            </div>
+            <div class="card-body formreg">
+                <form class="form">
+                    <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="">Application Name</label>
+                        <input [(ngModel)]="registerUserData.appname" name="appname" type="text"  class="form-control rounded-2 appname" placeholder="Enter Application name" required #name="ngModel"[class.is-invalid]="name.invalid && name.touched">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="">Email</label>
+                        <input [(ngModel)]="registerUserData.email" name="email" type="text"  class="form-control rounded-2 email" placeholder="Your Email" required #email="ngModel"[class.is-invalid]="email.invalid && email.touched">
+                    </div></div>
+                    <div class="row">
+                    <div class="form-group  col-sm-6">
+                        <label for="">Application Title</label>
+                        <input [(ngModel)]="registerUserData.title" name="title" type="text" class="form-control rounded-2 title" placeholder="Application Title" required>
+                    </div>
+                    <div class="form-group  col-sm-6">
+                        <label for="">Password</label>
+                        <input [(ngModel)]="registerUserData.password" name="password" type="password" class="form-control rounded-2 password" placeholder="Enter Password" #password="ngModel" pattern="^\d{6}$" required [class.is-invalid]="password.invalid && password.touched">
+                    </div></div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="inputState">Gender</label>
+                            <select #select="ngModel" [class.is-invalid]="select.invalid && select.touched"  id="inputState" class="form-control select" [(ngModel)]="registerUserData.select" name="select">
+                              <option selected>Select Gender</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <label for="inputState">Education</label>
+                            <select id="inputState" class="form-control">
+                              <option selected>Select Education</option>
+                              <option>Bachelor</option>
+                              <option>Master</option>
+                              <option>PHD</option>
+                            </select>
+                          </div> </div>
+                          <div class="row">
+                            <div class="form-group  col-sm-8">
+                                <label for="">Experince</label>
+                                <input type="text" class="form-control placeholderYour Experince rounded-2 exp"  [(ngModel)]="registerUserData.experiance" name="experiance" required>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="inputState">Years</label>
+                                <select id="inputState" class="form-control" >
+                                  <option selected>Years</option>
+                                  <option>Month</option>
+                                </select>
+                              </div>
+                          </div>
+                
+               
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<form style="border-radius: 10px;" class="foo">
+<div class="row">
+    <div class="col-lg-12">
+        <button (click)="registerUser()" type="button" class="btn btn-primary float-right post-user">Next</button>
+        <button ng-click="reset()" class="btn btn-outline-primary float-right mr-3">Cancel</button>
+        <button class="btn btn-outline-primary float-right mr-3" ><a  routerLink="register" routerLinkActive="active"></a>Creat another</button>
+    </div>
+</div></form>
+       
+   
+
+</form>
+
+
